@@ -45,7 +45,7 @@ public class ConsoleInput {
 	 * Metodo que devuelve un caracter que pertenezca a una lista de pasada como
 	 * parametro
 	 * 
-	 * @param validCharacters Lista de caracteres
+	 * @param validCharacters Lista de caracteres validos
 	 * @return un caracter valido
 	 */
 	public char readChar(String validCharacters) {
@@ -169,6 +169,7 @@ public class ConsoleInput {
 	 * Metodo que obtiene un byte introducido por el usuario
 	 * 
 	 * @return un byte
+	 * @exception InputMismatchException Si no introduce un numero
 	 */
 	public byte readByte() {
 		byte s = 0;
@@ -192,6 +193,7 @@ public class ConsoleInput {
 	 * Metodo que obtiene un short introducido por el usuario
 	 * 
 	 * @return un short
+	 * @exception InputMismatchException Si no introduce un numero
 	 */
 	public short readShort() {
 		short s = 0;
@@ -215,7 +217,7 @@ public class ConsoleInput {
 	 * Metodo que obtiene un int introducido por el usuario
 	 * 
 	 * @return un int
-	 * @exception InputMismatchException si no introduce un numero
+	 * @exception InputMismatchException Si no introduce un numero
 	 */
 	public int readInt() {
 		int s = 0;
@@ -239,6 +241,7 @@ public class ConsoleInput {
 	 * Metodo que obtiene un long introducido por el usuario
 	 * 
 	 * @return un long
+	 * @exception InputMismatchException Si no introduce un numero
 	 */
 	public long readLong() {
 		long s = 0;
@@ -262,6 +265,7 @@ public class ConsoleInput {
 	 * Metodo que obtiene un float introducido por el usuario
 	 * 
 	 * @return un float
+	 * @exception InputMismatchException Si no introduce un numero
 	 */
 	public float readFloat() {
 		float s = 0;
@@ -285,6 +289,7 @@ public class ConsoleInput {
 	 * Metodo que obtiene un double introducido por el usuario
 	 * 
 	 * @return un double
+	 * @exception InputMismatchException Si no introduce un numero
 	 */
 	public double readDouble() {
 		double s = 0;
@@ -389,6 +394,7 @@ public class ConsoleInput {
 	 * @return un byte
 	 */
 	public byte readByteLessOrEqualThan(byte upperBound) {
+
 		byte s;
 		do {
 			s = readByte();
@@ -396,6 +402,12 @@ public class ConsoleInput {
 		return s;
 	}
 
+	/**
+	 * Metodo que obtiene un short menor o igual a un parametro introducido por el
+	 * usuario
+	 * 
+	 * @return un short
+	 */
 	public short readShortLessOrEqualThan(short upperBound) {
 		short s;
 		do {
@@ -404,6 +416,10 @@ public class ConsoleInput {
 		return s;
 	}
 
+	/**
+	 * @param upperBound
+	 * @return
+	 */
 	public int readIntLessOrEqualThan(int upperBound) {
 		int s;
 		do {
